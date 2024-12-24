@@ -1,0 +1,24 @@
+<h1>Nueva Película</h1>
+
+<%= form_with model: @movie, local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :director %>
+    <%= form.text_field :director, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.submit 'Crear Película', class: 'btn btn-success' %>
+  </div>
+<% end %>
+<br>
+<div>
+  <%= link_to "Volver a Peliculas", movies_path, class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Documentary films" %>
+
+<h1>Documentales</h1>
+<br>
+<div>
+  <%= link_to 'Nuevo Documental', new_documentary_film_path, class: 'btn btn-primary' %>
+</div>
+
+<br>
+
+<div id="documentary_films">
+  <% @documentary_films.each do |documentary_film| %>
+    <%= render documentary_film %>
+    <p>
+      <%= link_to "Mostrar este documentario", documentary_film %>
+    </p>
+  <% end %>
+</div>

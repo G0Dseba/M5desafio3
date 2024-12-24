@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Movies" %>
+
+<h1>Películas</h1>
+
+<br>
+
+<div>
+  <%= link_to 'Nueva Película', new_movie_path, class: 'btn btn-primary' %>
+</div>
+
+<br>
+
+<div id="movies">
+  <% @movies.each do |movie| %>
+    <%= render movie %>
+    <p>
+      <%= link_to "Mostrar esta pelicula", movie %>
+    </p>
+  <% end %>
+</div>

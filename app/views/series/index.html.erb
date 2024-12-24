@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Series" %>
+
+<h1>Series</h1>
+
+<br>
+<div>
+  <%= link_to 'Nueva Serie', new_serie_path, class: 'btn btn-primary' %>
+</div>
+
+<br>
+
+<div id="series">
+  <% @series.each do |serie| %>
+    <%= render serie %>
+    <p>
+      <%= link_to "Mostrar esta serie", serie %>
+    </p>
+  <% end %>
+</div>
